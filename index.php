@@ -1,6 +1,7 @@
 <?php
     require_once __DIR__. '/Models/productType.php';
     $product1 = new ProductTypes('prodotto per cani', './img/logoSezioni/cane.logo.jpg','Pets imperial', 12, './img/cuccePerCani/pets_imperial.jpg', 'cuccia per cani');
+    $product2 = new ProductTypes('prodotto per gatti', './img/logoSezioni/cat.logo.png', 'cat imperial', 17,'./img/cucceGatti/cuccia_gatti.jpg', 'cuccia per gatti');
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +18,12 @@
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
+    <?php
+         require_once __DIR__. '/components/header.php';
+    ?>
     <main>
     <div class="list-container">
-        <ul>
+        <ul class="main-list-content">
             <li class="type-of-prodotto">
                 <p>
                     <?php echo $product1-> getType(); ?>
@@ -39,6 +43,32 @@
                     <p class="mt-10"> nome prodotto: <span class="font-s-16"><?php echo $product1-> getTitle(); ?></span></p>
                     <p class="mt-10">prezzo: <span class="font-s-16"><?php echo $product1-> getPrice();?>€</span></p>
                     <p class="mt-10">tipo: <span class="font-s-16"><?php echo $product1-> getProdType(); ?></span></p>
+                </div>
+               </div>
+            </li>
+        </ul>
+
+        <!-- lista 2  -->
+        <ul class="main-list-content">
+            <li class="type-of-prodotto">
+                <p>
+                    <?php echo $product2-> getType(); ?>
+                </p>
+            </li>
+            <li>
+               <div class="logo-container cat-logo">
+                    <img src="<?php echo $product2-> getCategory(); ?>" alt="cane.img">
+               </div>
+            </li>
+            <li>  
+               <div>
+                <div class="product-image-container">
+                        <img src="<?php echo $product2-> getImage(); ?>" alt="cuccia.img">
+                </div>
+                <div class="prodact-info">
+                    <p class="mt-10"> nome prodotto: <span class="font-s-16"><?php echo $product2-> getTitle(); ?></span></p>
+                    <p class="mt-10">prezzo: <span class="font-s-16"><?php echo $product2-> getPrice();?>€</span></p>
+                    <p class="mt-10">tipo: <span class="font-s-16"><?php echo $product2-> getProdType(); ?></span></p>
                 </div>
                </div>
             </li>
