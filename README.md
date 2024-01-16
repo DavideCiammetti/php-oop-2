@@ -29,3 +29,7 @@ prezzo prodotto: echo $product1-> getPrice();
 immagine prodotto: echo $product1-> getImage(); 
 <!-- per productType.php -->
 tipo del prodotto: echo $product1-> getProdType(); 
+
+## gestione pagine e form 
+
+in **components** abbiamo i componenti tra cui la registrazione con email e password ed anche il carrello per gli acquisti e l'accesso tramite email al sito 

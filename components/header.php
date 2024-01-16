@@ -18,13 +18,13 @@
             </div>
             <ul class="main-nav-list">
                 <li class="list-item-menu">
-                    <a href="#">sign in  <i class="fa-solid fa-right-to-bracket ico-menu"></i></a>
+                    <a href="#" target="_blank">sign in  <i class="fa-solid fa-right-to-bracket ico-menu"></i></a>
                 </li>
                 <li class="list-item-menu">
-                    <a href="#">sign up <i class="fa-solid fa-user-plus ico-menu"></i></a>
+                    <a href="components/signUp/signUpPage.html" target="_blank" >sign up<i class="fa-solid fa-user-plus ico-menu"></i></a>
                 </li>
                 <li class="list-item-menu">
-                    <a href="#">shopping cart<i class="fa-solid fa-cart-shopping ico-menu"></i></a>
+                    <a href="#" target="_blank">shopping cart<i class="fa-solid fa-cart-shopping ico-menu"></i></a>
                 </li>
             </ul>
         </nav>

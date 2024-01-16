@@ -63,6 +63,7 @@ main{
         padding: 5px;
         border-radius: 5px;
         margin: 0 20px;
+        box-shadow: 8px 5px 5px black;
     }
     .type-of-prodotto{
         line-height: 2.4;
@@ -78,8 +79,10 @@ main{
     /* immagine logo sezione */
     .logo-container{
         width: 35px;
+    }
+    .list-logo{
         position: absolute;
-        top: 5px;
+        top: 6px;
         left: 10px;
     }
     .logo-container img{

@@ -19,61 +19,61 @@
 </head>
 <body>
     <?php
-         require_once __DIR__. '/components/header.php';
-    ?>
-    <main>
-    <div class="list-container">
-        <ul class="main-list-content">
-            <li class="type-of-prodotto">
-                <p>
-                    <?php echo $product1-> getType(); ?>
-                </p>
-            </li>
-            <li>
-               <div class="logo-container">
-                    <img src="<?php echo $product1-> getCategory(); ?>" alt="cane.img">
-               </div>
-            </li>
-            <li>  
-               <div>
-                <div class="product-image-container">
-                        <img src="<?php echo $product1-> getImage(); ?>" alt="cuccia.img">
-                </div>
-                <div class="prodact-info">
-                    <p class="mt-10"> nome prodotto: <span class="font-s-16"><?php echo $product1-> getTitle(); ?></span></p>
-                    <p class="mt-10">prezzo: <span class="font-s-16"><?php echo $product1-> getPrice();?>€</span></p>
-                    <p class="mt-10">tipo: <span class="font-s-16"><?php echo $product1-> getProdType(); ?></span></p>
-                </div>
-               </div>
-            </li>
-        </ul>
+            require_once __DIR__. '/components/header.php';
+        ?>
+        <main>
+                <div class="list-container">
+                    <ul class="main-list-content">
+                        <li class="type-of-prodotto ">
+                            <p>
+                                <?php echo $product1-> getType(); ?>
+                            </p>
+                        </li>
+                        <li class="list-logo">
+                        <div class="logo-container">
+                                <img src="<?php echo $product1-> getCategory(); ?>" alt="cane.img">
+                        </div>
+                        </li>
+                        <li>  
+                        <div>
+                            <div class="product-image-container">
+                                    <img src="<?php echo $product1-> getImage(); ?>" alt="cuccia.img">
+                            </div>
+                            <div class="prodact-info">
+                                <p class="mt-10">Nome Prodotto: <span class="font-s-16"><?php echo $product1-> getTitle(); ?></span></p>
+                                <p class="mt-10">Prezzo: <span class="font-s-16"><?php echo $product1-> getPrice();?>€</span></p>
+                                <p class="mt-10">Tipo: <span class="font-s-16"><?php echo $product1-> getProdType(); ?></span></p>
+                            </div>
+                        </div>
+                        </li>
+                    </ul>
 
-        <!-- lista 2  -->
-        <ul class="main-list-content">
-            <li class="type-of-prodotto">
-                <p>
-                    <?php echo $product2-> getType(); ?>
-                </p>
-            </li>
-            <li>
-               <div class="logo-container cat-logo">
-                    <img src="<?php echo $product2-> getCategory(); ?>" alt="cane.img">
-               </div>
-            </li>
-            <li>  
-               <div>
-                <div class="product-image-container">
-                        <img src="<?php echo $product2-> getImage(); ?>" alt="cuccia.img">
-                </div>
-                <div class="prodact-info">
-                    <p class="mt-10"> nome prodotto: <span class="font-s-16"><?php echo $product2-> getTitle(); ?></span></p>
-                    <p class="mt-10">prezzo: <span class="font-s-16"><?php echo $product2-> getPrice();?>€</span></p>
-                    <p class="mt-10">tipo: <span class="font-s-16"><?php echo $product2-> getProdType(); ?></span></p>
-                </div>
-               </div>
-            </li>
-        </ul>
-   </div>
-    </main>
+                    <!-- lista 2  -->
+                    <ul class="main-list-content">
+                        <li class="type-of-prodotto">
+                            <p>
+                                <?php echo $product2-> getType(); ?>
+                            </p>
+                        </li>
+                        <li class="list-logo">
+                        <div class="logo-container cat-logo">
+                                <img src="<?php echo $product2-> getCategory(); ?>" alt="cane.img">
+                        </div>
+                        </li>
+                        <li>  
+                        <div>
+                            <div class="product-image-container">
+                                    <img src="<?php echo $product2-> getImage(); ?>" alt="cuccia.img">
+                            </div>
+                            <div class="prodact-info">
+                                <p class="mt-10"> Nome Prodotto: <span class="font-s-16"><?php echo $product2-> getTitle(); ?></span></p>
+                                <p class="mt-10">Prezzo: <span class="font-s-16"><?php echo $product2-> getPrice();?>€</span></p>
+                                <p class="mt-10">Tipo: <span class="font-s-16"><?php echo $product2-> getProdType(); ?></span></p>
+                            </div>
+                        </div>
+                        </li>
+                    </ul>
+            </div>
+        </main>
 </body>
 </html>
