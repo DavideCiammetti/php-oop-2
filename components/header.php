@@ -24,7 +24,7 @@
                     <a href="components/signUp/signUpPage.html" target="_blank" >sign up<i class="fa-solid fa-user-plus ico-menu"></i></a>
                 </li>
                 <li class="list-item-menu">
-                    <a href="#" target="_blank">shopping cart<i class="fa-solid fa-cart-shopping ico-menu"></i></a>
+                    <a href="components/shoppingCart/shoppingCart.html" target="_blank">shopping cart<i class="fa-solid fa-cart-shopping ico-menu"></i></a>
                 </li>
             </ul>
         </nav>

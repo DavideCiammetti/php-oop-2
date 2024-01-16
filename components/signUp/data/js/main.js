@@ -5,16 +5,11 @@ createApp({
     return {
       data: [],
       apiUrl:'data/script.php',
-      newPassword: '',
-      newEmail: '',
+      newPassword: null,
+      newEmail: null,
     };
   },
   methods:{
-    // getData() {
-    //   axios.get(this.apiUrl).then((response) => {
-    //     this.data = response.data;
-    //   });
-    // },
     postEmailPass(){
       const param = {
           create: 1,
@@ -29,7 +24,6 @@ createApp({
           this.data = response.data;
           console.log(this.data);
          });
-    
          this.newEmail = '';
          this.newPassword = '';
       },

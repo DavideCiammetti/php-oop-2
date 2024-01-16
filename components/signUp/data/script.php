@@ -1,7 +1,7 @@
 <?php
 
     $database = file_get_contents(__DIR__.'/data.json');  
-    
+
     $email = json_decode($database);
 
     if(isset($_POST['create'])){
@@ -15,7 +15,6 @@
         ];
 
         $email[] = $newData;
-
         file_put_contents('data.json',json_encode($email));
           
     }
