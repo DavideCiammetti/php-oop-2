@@ -6,7 +6,7 @@
         protected $price;
         protected $image;
 
-        public function __construct($type, $categoryIcon, $title, $price, $image){
+        public function __construct($type, $categoryIcon, $title, int $price, $image){
             parent::__construct($type, $categoryIcon);
             $this->title = $title;
             $this->price = $price;

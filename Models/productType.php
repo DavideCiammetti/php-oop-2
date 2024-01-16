@@ -13,6 +13,7 @@
             return $this->prodactType;
        }
     }
-
-    $product1 = new ProductTypes('cane', 'immagine/cane','titolo', 'prezzo', 'immagine', 'cuccia');
+    // $cane = new Categories('cane', 'immagine/cane');
+    //$product1 = new Product('cane', 'immagine/cane','titolo', 'prezzo', 'immagine');
+    // $product1 = new ProductTypes('cane', 'immagine/cane','titolo', 'prezzo', 'immagine', 'cuccia');
 ?>
