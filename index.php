@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__. '/Models/categories.php';
+    require_once __DIR__. '/Models/productType.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,10 +11,15 @@
 </head>
 <body>
     <h3>product</h3>
-    <p><?php echo $product1-> getType(); ?></p>
-    <p><?php echo $product1-> getCategory(); ?></p>
-    <p><?php echo $product1-> getTitle(); ?></p>
-    <p><?php echo $product1-> getPrice(); ?></p>
-    <p><?php echo $product1-> getImage(); ?></p>
+   <div>
+        <ul>
+            <li>reparto: <?php echo $product1-> getType(); ?></li>
+            <li>logoCane: <?php echo $product1-> getCategory(); ?></li>
+            <li>titolo prodotto: <?php echo $product1-> getTitle(); ?></li>
+            <li>prezzo prodotto: <?php echo $product1-> getPrice(); ?></li>
+            <li>immagine prodotto: <?php echo $product1-> getImage(); ?></li>
+            <li>tipo del prodotto: <?php echo $product1-> getProdType(); ?></li>
+        </ul>
+   </div>
 </body>
 </html>
