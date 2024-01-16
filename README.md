@@ -15,3 +15,14 @@ CATEGORIES---caratteristiche categoria---> tipo(cane, gatto), icona_categoria
 PRODUCT extends CATEGORIES---caratteristiche di un prodotto generale---> titolo, prezzo, immagine
 
 PRODUCTS extends PRODUCT---tipi di prodotto venduti---> tipo_prodotto (giochi, cucce, cibo)
+
+## come prendere inserire i dati 
+<!-- per categories.php -->
+reparto: echo $product1-> getType(); (cane o gatto)
+logoCane: echo $product1-> getCategory(); (o logo gatto)
+<!-- per product.php -->
+titolo prodotto: echo $product1-> getTitle(); 
+prezzo prodotto: echo $product1-> getPrice(); 
+immagine prodotto: echo $product1-> getImage(); 
+<!-- per productType.php -->
+tipo del prodotto: echo $product1-> getProdType(); 
