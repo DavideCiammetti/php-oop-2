@@ -1,7 +1,11 @@
 <?php
     require_once __DIR__. '/Models/productType.php';
-    $product1 = new ProductTypes('prodotto per cani', './img/logoSezioni/cane.logo.jpg','Pets imperial', 12, './img/cuccePerCani/pets_imperial.jpg', 'cuccia per cani');
-    $product2 = new ProductTypes('prodotto per gatti', './img/logoSezioni/cat.logo.png', 'cat imperial', 17,'./img/cucceGatti/cuccia_gatti.jpg', 'cuccia per gatti');
+    try{
+        $product = new ProductTypes('prodotto per cani', './img/logoSezioni/cane.logo.jpg','Pets imperial', 12, './img/cuccePerCani/pets_imperial.jpg', 'cuccia per cani');
+        $product2 = new ProductTypes('prodotto per gatti', './img/logoSezioni/cat.logo.png', 'cat imperial', 17,'./img/cucceGatti/cuccia_gatti.jpg', 'cuccia per gatti');
+    }catch(Exception $e){
+        echo $e->getMessage();
+    }
 ?>
 
 <!DOCTYPE html>
