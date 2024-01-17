@@ -15,9 +15,16 @@ Il cliente effettua il pagamento dei prodotti nel *carrello* con la **carta di c
 
 CATEGORIES---caratteristiche categoria---> tipo(cane, gatto), icona_categoria
 
-PRODUCT extends CATEGORIES---caratteristiche di un prodotto generale---> titolo, prezzo, immagine
+PRODUCT extends CATEGORIES---caratteristiche di un prodotto generale---> titolo, prezzo, immagine, nome, descrizione
 
-PRODUCTS extends PRODUCT---tipi di prodotto venduti---> tipo_prodotto (giochi, cucce, cibo)
+PRODUCTTYPE extends PRODUCT---tipi di prodotto venduti---> tipo_prodotto (giochi, cucce, cibo)
+
+GAME ---> caratteristiche---> dimensione, materiale, prodotto_in
+
+cucce---> caratteristiche---> dimensione, prodotto_in, materiale
+
+food---> caratteristiche---> alimenti, valoreEnergetico, prodotto_in
+
 
 ## come prendere inserire i dati 
 <!-- per categories.php -->
