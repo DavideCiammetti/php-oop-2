@@ -1,17 +1,14 @@
 <?php
-    require_once __DIR__. '/categories.php';
 
     class Product{
        private $title;
        private $price;
        private $image;
-       private $categories;
 
-        public function __construct($title, int $price, $image, Categories $categories){
+        public function __construct($title, $price, $image){
             $this->title = $title;
             $this->price = $price;
             $this->image = $image;
-            $this->categories = $categories;
         }
 
         // set
@@ -27,10 +24,6 @@
             $this->image =  $image;
         }
 
-        public function setCategories($categories){
-            $this->categories = $categories;
-        }
-
         // get
         public function getTitle(){
             return $this->title;
@@ -42,10 +35,6 @@
 
         public function getImage(){
             return $this->image;
-        }
-
-        public function sgetCategories(){
-           return $this->categories;
         }
     }
 ?>

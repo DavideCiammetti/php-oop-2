@@ -1,15 +1,14 @@
 <?php
     require_once __DIR__. '/productType.php';
     
-    class Categories{
+    class Categories extends ProductTypes{
         private $type;
         private $categoryIcon;
-        private $productType;
 
-        public function __construct($type, $categoryIcon,ProductTypes $productType){
+        public function __construct($productType, $type, $categoryIcon){
+            parent::__construct($productType);
             $this->type = $type;
             $this->categoryIcon = $categoryIcon;
-            $this->productType = $productType;
         }
 
         // set
@@ -21,10 +20,6 @@
             $this->categoryIcon = $categoryIcon;
         }
 
-        public function setProductType($productType){
-            $this->productType = $productType;
-        }
-
         // get
         public function getType(){
             return $this->type;
@@ -33,11 +28,8 @@
         public function getCategory(){
             return $this->categoryIcon;
         }
-
-        public function getProductType(){
-            return $this->productType;
-        }
-        
     }
+
+    $gioco_cane = new Categories('gioco per cani', 'cane', 'icona cane');
 ?>
 

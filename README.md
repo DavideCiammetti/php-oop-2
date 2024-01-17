@@ -25,6 +25,12 @@ cucce---> caratteristiche---> dimensione, prodotto_in, materiale
 
 food---> caratteristiche---> alimenti, valoreEnergetico, prodotto_in
 
+<!-- 
+    1) productTypes-- in categories
+    2) categories-- in food, game, cucce
+    3) product--- in food, game, cucce
+ -->
+
 
 ## come prendere inserire i dati 
 <!-- per categories.php -->
