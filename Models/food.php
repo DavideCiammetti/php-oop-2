@@ -46,7 +46,7 @@
         }
 
         public function getCategories(){
-            $this->categories;
+           return $this->categories;
         }
     }
 ?>

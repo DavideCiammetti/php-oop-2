@@ -29,7 +29,5 @@
             return $this->categoryIcon;
         }
     }
-
-    $gioco_cane = new Categories('gioco per cani', 'cane', 'icona cane');
 ?>
 
