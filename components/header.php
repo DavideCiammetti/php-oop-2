@@ -13,8 +13,10 @@
 <body>
     <header>
         <nav>
-            <div>
-                logo
+            <div  class="logo-container">
+                <span class="ico-span">
+                    <i class="fa-solid fa-paw"></i>
+                </span>
             </div>
             <ul class="main-nav-list">
                 <li class="list-item-menu">

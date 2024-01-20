@@ -3,14 +3,11 @@
     require_once __DIR__. '/Models/food.php';
     require_once __DIR__. '/Models/categories.php';
 
-        $gioco_cane = new Categories('gioco per cani', 'cane', '<i class="fa-solid fa-dog"></i>');
-        $cibo_gatto = new Categories('cibo per gatti', 'gatto','<i class="fa-solid fa-cat"></i>');
-        $newGame = new Game('palla per cani', 12, 'immagine prodotto', '30cm x 25cm', 'made in italy',$gioco_cane);
+        $gioco_cane = new Categories('gioco per cani', 'cane', '<i class="fa-solid fa-dog fs-2"></i>');
+        $cibo_gatto = new Categories('cibo per gatti', 'gatto','<i class="fa-solid fa-cat fs-2"></i>');
 
-        $newFood = new Food( 'friskis croccantini',22.99, 'immagine','tonno, mais','made in: giapan',$cibo_gatto);
-        // DA ELIMINARE SOLO PER PROVA
-        // $product1 = new ProductTypes('prodotto per cani', './img/logoSezioni/cane.logo.jpg','Pets imperial', 12, './img/cuccePerCani/pets_imperial.jpg', 'cuccia per cani');
-        // $product2 = new ProductTypes('prodotto per gatti', './img/logoSezioni/cat.logo.png', 'cat imperial', 17,'./img/cucceGatti/cuccia_gatti.jpg', 'cuccia per gatti');
+        $newGame = new Game('palla per cani', 12, 'img/giochiCani/palla-con-corda.jpg', 'made in italy',$gioco_cane);
+        $newFood = new Food( 'friskis croccantini',22.99, 'img/ciboGatti/sheba.jpg','vitello, tacchino','giapan',$cibo_gatto);
         $newArray = [ $newGame, $newFood];
 ?>
 
@@ -42,16 +39,30 @@
     <?php
         require_once __DIR__. '/components/header.php';
     ?>
-    <main>
+    <main class="d-flex">
         <?php foreach ($newArray as $value) { ?>
             
-            <div class="card" style="width: 18rem;">
-            <p><span><?php echo $value->getCategories()->getCategory(); ?>c</span></p>
-                <!-- <img src="..." class="card-img-top" alt="..."> -->
-                img
-                <p><?php echo $value->getPrice(); ?></p>
-                <p><?php echo $value->getMadeIn(); ?></p>
-                <p><?php echo $newFood->getIngredients();?></p>
+            <div class="card p-3 m-4 border-black border-5" style="width: 18rem;">
+            <p>
+                <span class="fs-5">
+                    <?php 
+                        echo $value->getCategories()->getType();
+                    ?>
+                 </span>
+                 <!-- icona -->
+                 <span>
+                 <?php 
+                        echo $value->getCategories()->getCategory();
+                    ?>
+                 </span>
+            </p>
+               <div class="img-container">
+                    <img src="<?php echo $value->getImage();?>"  class="card-img-top" alt="img">
+               </div>
+                <p>descrizione:  <span class="fs-5"><?php echo $value->getTitle();?></span></p>
+                <p>prezzo:<span class="fs-5"><?php echo $value->getPrice(); ?>€</span></p>
+                <p>tipo di prodotto: <span class="fs-5"><?php echo $value->getCategories()->getProductType(); ?></span></p>
+                <p>made in: <span class="fs-5"><?php echo $value->getMadeIn(); ?></span></p>
                 <div class="card-body">
                 </div>
             </div>
