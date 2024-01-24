@@ -4,23 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
+    <!-- /google fonts -->
+    <!-- cdn fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- /font awesome -->
+    <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- /bootstrap -->
     <title>sign up</title>
+    <!-- my style -->
+        <link rel="stylesheet" href="./signUp-style/signUpStyle.css">
+    <!-- my style -->
 </head>
 <body>
   <div id="app">
-    <main>
+    <main class="d-flex justify-content-center align-items-center">
         <div>
-            <form @submit.prevent="postEmailPass()" >
-              <div>
-                <label for="email">Email</label>
-                <input type="email" v-model="newEmail" name="email" placeholder="insert email">
+          <div v-show="validationError">
+            <p class="error-message">email o password non sono state inserite correttamente</p>
+          </div>
+            <form v-show="!validationError" @submit.prevent="postEmailPass()" method="post">
+              <div class="mb-2">
+                <label for="inputEmail4" class="form-label text-light">Email</label>
+                <input type="email"  v-model="newEmail" name="email" class="form-control" placeholder="insert email" id="inputEmail4">
               </div>
-              <div>
-                <label for="newPass">Password</label>
-                <input type="password" v-model="newPassword" name="newPass" placeholder="insert the password">
+              <div class="mt-2">
+                <label for="inputPassword4" class="form-label text-light">Password</label>
+                <input type="password" v-model="newPassword" name="newPass" class="form-control" placeholder="insert the password" id="inputPassword4">
               </div>
-              <div>
-                <button type="submit">Send</button>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary mt-3">Sign in</button>
               </div>
             </form>
         </div>

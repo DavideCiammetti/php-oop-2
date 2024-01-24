@@ -1,0 +1,8 @@
+main{
+    height: 100vh;
+    background-color: #003e45;
+}
+.error-message{
+    font-size: 20px;
+    color: white;
+}
